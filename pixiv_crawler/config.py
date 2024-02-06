@@ -34,7 +34,7 @@ NETWORK_CONFIG = {
     # proxy setting
     #   you should customize your proxy setting accordingly
     #   default is for clash
-    "PROXY": {"https": "http://127.0.0.1:1080"},
+    #"PROXY": {"https": "http://127.0.0.1:1080"},
 
     # common request header
     "HEADER": {
@@ -47,16 +47,17 @@ USER_CONFIG = {
     # user id
     #   access your pixiv user profile to find this
     #   e.g. https://www.pixiv.net/users/xxxx
-    "USER_ID": "",
+    "USER_ID": os.getenv("PIXIV_USERNAME"),
 
-    "COOKIE": ""
+    "COOKIE": os.getenv("PIXIV_COOKIE")
+
 }
 
 
 DOWNLOAD_CONFIG = {
     # image save path
     #   NOTE: DO NOT miss "/"
-    "STORE_PATH": "images_85/",
+    "STORE_PATH": "/home/runner/work/down_img/",
 
     # abort request / download
     #   after 10 unsuccessful attempts
