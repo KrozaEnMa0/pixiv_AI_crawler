@@ -29,7 +29,6 @@ def collect(args: Tuple[str, Callable, Optional[Dict]]) \
         try:
             response = requests.get(
                 url, headers=headers,
-                proxies=NETWORK_CONFIG["PROXY"],
                 timeout=4)
 
             if response.status_code == 200:
