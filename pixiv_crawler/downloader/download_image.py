@@ -49,7 +49,6 @@ def downloadImage(url: str, save: bool=True, sub_folder:str=None):
         try:
             response = requests.get(
                 url, headers=headers,
-                proxies=NETWORK_CONFIG["PROXY"],
                 timeout=(4, wait_time))
 
             if response.status_code == 200:
