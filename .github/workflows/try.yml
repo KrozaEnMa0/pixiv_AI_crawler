@@ -40,7 +40,7 @@ jobs:
       - name: Downloading
         continue-on-error: false
         run: |
-          python AIcrawler.py --ckpt ./checkpoint-best_t5.pth --n_images 5 --keyword "ブルーアーカイブ"
+          python AIcrawler.py --ckpt /home/runner/work/pixiv_AI_crawler/pixiv_AI_crawler/checkpoint-best_t5.pth --n_images 5 --keyword "ブルーアーカイブ"
 
       - name: Upload File A.R.O.N.A
         uses: actions/upload-artifact@v3
